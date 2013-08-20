@@ -1,0 +1,56 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Index</title>
+    <link rel="stylesheet" href="/Styles/ui-lightness/jquery.ui.all.css"/>
+    <link rel="stylesheet" href="/Styles/aio.css"/>
+    <script src="/Scripts/jquery.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.ui.core.min.js"></script>
+	<script src="/Scripts/jquery.ui.datepicker.min.js"></script>
+    <script src="/Scripts/jquery.ui.datepicker-ru.js"></script>
+    <script src="/Scripts/aio.js"></script>
+</head>
+<body>
+    <form id="main_form">
+        <div class="main">
+            <div class="field">
+                <label for="data_provider">Выберите сервер</label>
+                <select id="data_provider">
+                    <option value="google">Google</option>
+                    <option value="yahoo">Yahoo</option>
+                    <option value="random">Random</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="quote">Введите код</label>
+                <input type="text" id="quote" placeholder="AAPL,MSFT,GOOG,…"/>
+            </div>
+            
+        </div>
+        <div class="main">
+            <div class="field">
+                <label for="DateFrom">Дата с</label>
+                <input type="text" class="date_input" id="DateFrom" readonly="readonly" />
+                по
+                <input type="text" class="date_input" id="DateTo" readonly="readonly"/>
+            </div>
+            <div class="field">
+                Результатов на страницу
+                <select id="items_per_page">
+                    <option value="10" selected="selected">10</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="0">Все</option>
+                </select>
+            </div>
+         </div>
+         <button type="button" class="btn" id="get_data">Получить данные</button>
+    </form>
+    <div id="div_for_table"></div>
+</body>
+</html>
